@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/set_bcgrd" >
+
+    <RelativeLayout
+        android:id="@+id/prfnc_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_passcode" >
+
+        <Button
+            android:id="@+id/prfnc_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/btn_back_normal" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/prfnc_onoff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prfnc_navi"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/txt_box_set1"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="12dp"
+        android:text="@string/passcode_turn_on"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/txt_clr" />
+
+    <Button
+        android:id="@+id/prfnc_enable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prfnc_onoff"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/txt_box_set1"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="12dp"
+        android:text="@string/passcode_change_passcode"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/txt_clr" />
+
+</RelativeLayout>

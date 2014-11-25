@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stng_viewflipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/set_bcgrd" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set_bcgrd" >
+
+        <RelativeLayout
+            android:id="@+id/stng_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/navigation_bar" >
+
+            <Button
+                android:id="@+id/stng_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/btn_back_normal" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/stng_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/stng_navi" >
+
+            <RelativeLayout
+                android:id="@+id/lgn_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/stng_prfrl"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/frame" >
+
+                    <ImageView
+                        android:id="@+id/stng_prfimg"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stng_namerl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_prfrl"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/txt_box_set" >
+
+                    <TextView
+                        android:id="@+id/stng_txtname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txt_clr" />
+
+                    <TextView
+                        android:id="@+id/stng_edtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="55dp"
+                        android:layout_toRightOf="@+id/stng_txtname"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txt_clr" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stng_userl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_namerl"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set" >
+
+                    <TextView
+                        android:id="@+id/stng_txtuse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/space"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txt_clr" />
+
+                    <ViewFlipper
+                        android:id="@+id/stng_aniviewflipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@+id/stng_visible"
+                        android:layout_toRightOf="@+id/stng_txtuse" />
+
+                    <RelativeLayout
+                        android:id="@+id/stng_visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp" >
+
+                        <Button
+                            android:id="@+id/stng_per"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="@string/percentage"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/txt_clr"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/stng_gb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="@string/gb"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/txt_clr"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/stng_passcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_userl"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/code"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" />
+
+                <Button
+                    android:id="@+id/stng_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_passcode"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/help"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" />
+
+                <Button
+                    android:id="@+id/stng_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_help"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/friend"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" />
+
+                <Button
+                    android:id="@+id/stng_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_friend"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/privacy"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" />
+
+                <Button
+                    android:id="@+id/stng_singout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_privacy"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/txt_box_set"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:text="@string/singout"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/set_redcolor"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stng_txtempty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stng_singout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stng_policycondition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/stng_rllayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav1" >
+
+            <Button
+                android:id="@+id/stng_policyback"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/stng_webpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_policyok"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/stng_rllayout"
+            android:background="@android:color/transparent"
+            android:paddingBottom="100dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" />
+
+        <Button
+            android:id="@+id/stng_policyok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ok_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set_bcgrd" >
+
+        <RelativeLayout
+            android:id="@+id/stng1_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/nav_settings" >
+
+            <Button
+                android:id="@+id/stng1_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/btn_done1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stng1_namerl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stng1_navi"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/txt_box_set1" >
+
+            <TextView
+                android:id="@+id/stng1_txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/code"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_clr" />
+
+            <TextView
+                android:id="@+id/stng1_onoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="32dp"
+                android:text="@string/on"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_clr" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ViewFlipper>

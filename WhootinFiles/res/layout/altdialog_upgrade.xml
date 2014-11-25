@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/upgrade_sample"
+    android:layout_width="wrap_content"
+    android:layout_height="230dp"
+    android:layout_gravity="center"
+    android:background="@drawable/btn_upgrade"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/upgrade_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp" >
+
+        <Button
+            android:id="@+id/upgrade_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/upgrade_ok"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</LinearLayout>

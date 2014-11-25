@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <ViewFlipper
+        android:id="@+id/lgn_viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/lgn_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/lgn_img_rlll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/nav_bar_login" >
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/lgnrl_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lgn_img_rlll"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" >
+
+                <RelativeLayout
+                    android:id="@+id/lgn_rl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/lgn_img_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ogo" >
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lgn_usrnm_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/lgn_img_rl"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/txt_user" >
+
+                        <EditText
+                            android:id="@+id/lgn_usrnm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/uname"
+                            android:imeActionId="@+id/lgn_pswd"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lgn_pawd_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lgn_usrnm_rl"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/txt_pass" >
+
+                        <EditText
+                            android:id="@+id/lgn_pswd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/lgn_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lgn_pawd_rl"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/btn_sigin_normal" />
+
+                    <Button
+                        android:id="@+id/lgn_reg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lgn_login"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/btn_signup_text" />
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sgn_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/sgn_img_rlll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/nav_bar_signup" >
+
+                <Button
+                    android:id="@+id/sgn_bckbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/btn_back_normal" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/sgn_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sgn_img_rlll"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sgn_rl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <EditText
+                            android:id="@+id/sgn_setName"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/sgn_setFName"
+                            android:background="@drawable/txt_fname"
+                            android:hint="@string/fname"
+                            android:paddingLeft="57dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+
+                        <EditText
+                            android:id="@+id/sgn_setFName"
+                            android:layout_width="165dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/txt_lname"
+                            android:hint="@string/lname"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_uname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_name"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/txt_user" >
+
+                        <EditText
+                            android:id="@+id/sgn_setUname"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/uname"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_uname"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/txt_mail" >
+
+                        <EditText
+                            android:id="@+id/sgn_setEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/email"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_email"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/txt_birthday" >
+
+                        <EditText
+                            android:id="@+id/sgn_setdob"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/selectdate"
+                            android:background="@android:color/transparent"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:hint="@string/dob"
+                            android:inputType="date"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+
+                        <Button
+                            android:id="@+id/selectdate"
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_selectdate" />
+                    </RelativeLayout>
+
+                    <DatePicker
+                        android:id="@+id/datePickerSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_dob"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_dob"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/txt_pass" >
+
+                        <EditText
+                            android:id="@+id/sgn_setpassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sgn_repass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sgn_pass"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/txt_pass" >
+
+                        <EditText
+                            android:id="@+id/sgn_setReenterPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/rpassword"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="15dp"
+                            android:password="true"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/txt_clr"
+                            android:textColorHint="@color/hnt_clr" />
+                    </RelativeLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/sgn_repass"
+                        android:layout_marginTop="12dp"
+                        android:button="@drawable/checkbox_selector"
+                        android:paddingLeft="30dp"
+                        android:singleLine="true"
+                        android:text="@string/terms"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/txt_clr" >
+                    </CheckBox>
+
+                    <Button
+                        android:id="@+id/checkbox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/checkbox1"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/privacy"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/txt_clr" />
+
+                    <Button
+                        android:id="@+id/sgn_success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/checkbox2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btn_signup_normal" />
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mnpg_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/mnpg_hdrl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/navigation_bar" >
+
+                <Button
+                    android:id="@+id/mnpg_lgtbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/btn_logout" />
+
+                <Button
+                    android:id="@+id/mnpg_alv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/btn_alignment" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mnpg_blckrl"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/mnpg_hdrl"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/black_popup"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/mnpg_az"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/mnpg_time"
+                    android:background="@drawable/ico_az_align" />
+
+                <Button
+                    android:id="@+id/mnpg_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/mnpg_name"
+                    android:background="@drawable/ico_date_align" />
+
+                <Button
+                    android:id="@+id/mnpg_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ico_type_align" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mnpg_hrl"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/mnpg_hdrl"
+                android:background="@drawable/h_bg" >
+
+                <com.devsmart.android.ui.HorizontalListView
+                    android:id="@+id/mnpg_hlistview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/mnpg_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/fld_navi_bottomrl"
+                android:layout_below="@+id/mnpg_hrl"
+                android:layout_margin="2dp"
+                android:divider="#CCCCCC"
+                android:dividerHeight="1dip" >
+            </ListView>
+
+            <RelativeLayout
+                android:id="@+id/fld_navi_bottomrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tab_bar" >
+
+                <Button
+                    android:id="@+id/mnpg_minusbtn"
+                    style="@style/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_newfolder" />
+
+                <Button
+                    android:id="@+id/mnpg_plusbtn"
+                    style="@style/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_upload" />
+            </RelativeLayout>
+
+            <ViewFlipper
+                android:id="@+id/mnpg_vfupgrade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp" >
+            </ViewFlipper>
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/lgn_viewflipper2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_transparent" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/popup_white" >
+
+                <RelativeLayout
+                    android:id="@+id/add_navi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/popup_nav_bar" >
+
+                    <Button
+                        android:id="@+id/add_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_navi"
+                    android:background="@drawable/bar" >
+
+                    <Button
+                        android:id="@+id/add_btn_fldadd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/btn_folderadd" />
+
+                    <TextView
+                        android:id="@+id/add_txt_hd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/add_btn_fldadd"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/app_name"
+                        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                        android:textColor="@color/txt_clr"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bar_bottom"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/add_btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_cancel12" />
+
+                    <Button
+                        android:id="@+id/add_btn_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_add1" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_hrl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/add_head"
+                    android:background="@drawable/h_bg" >
+
+                    <com.devsmart.android.ui.HorizontalListView
+                        android:id="@+id/add_hlistview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/add_listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/add_bottom"
+                    android:layout_below="@+id/add_hrl" >
+                </ListView>
+
+                <ViewFlipper
+                    android:id="@+id/add_vfupgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp" >
+                </ViewFlipper>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/lgn_viewflipper3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/terms_condition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/termslayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nav2" >
+
+                    <Button
+                        android:id="@+id/btn_termsback"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webpage_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_termsok"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/termslayout2"
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="100dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" />
+
+                <Button
+                    android:id="@+id/btn_termsok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ok_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/policy_condition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/policylayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nav1" >
+
+                    <Button
+                        android:id="@+id/btn_policyback"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent" />
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webpage_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_policyok"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/policylayout2"
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="100dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" />
+
+                <Button
+                    android:id="@+id/btn_policyok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ok_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+        
+    </ViewFlipper>
+
+</RelativeLayout>

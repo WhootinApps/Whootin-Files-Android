@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="@drawable/popup_white" >
+
+        <RelativeLayout
+            android:id="@+id/sub_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/navbar_newfolder" >
+
+            <Button
+                android:id="@+id/sub_back"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/sub_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_done" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sub_hrl"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/sub_navi"
+            android:background="@drawable/h_bg" >
+
+            <com.devsmart.android.ui.HorizontalListView
+                android:id="@+id/sub_hlistview"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sub_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sub_bottom"
+            android:layout_below="@+id/sub_hrl"
+            android:background="@drawable/bg_newfolder"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/sub_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sub_bottom"
+            android:layout_below="@+id/sub_hrl" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/sub_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/folder_pop" >
+
+            <RelativeLayout
+                android:id="@+id/sub_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp" >
+
+                <Button
+                    android:id="@+id/sub_txted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/foldername" />
+
+                <EditText
+                    android:id="@+id/sub_txt_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_toRightOf="@+id/sub_txted"
+                    android:background="@drawable/txt"
+                    android:gravity="left"
+                    android:hint="Folder Name"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                    android:textColor="@color/txt_up"
+                    android:textColorHint="@color/txt_dwn"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub_1"
+                android:layout_marginTop="12dp" >
+
+                <Button
+                    android:id="@+id/sub_ok_btn"
+                    style="@style/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_fldcreate" />
+
+                <Button
+                    android:id="@+id/sub_cancel_btn"
+                    style="@style/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_fldcancel1" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/subbottom2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_bar"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/sub_ok_btnnew"
+                style="@style/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_newfolder" />
+
+            <Button
+                android:id="@+id/sub_upload_btn"
+                style="@style/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_upload" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/sub_vfupgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp" >
+    </ViewFlipper>
+
+</RelativeLayout>

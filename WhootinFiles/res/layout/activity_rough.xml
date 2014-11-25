@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set_bcgrd" >
+
+        <RelativeLayout
+            android:id="@+id/stng1_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/nav_settings" >
+
+            <Button
+                android:id="@+id/stng1_done"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_done1" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/stng1_namerl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stng1_navi"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/txt_box_set1" >
+
+                    <TextView
+                        android:id="@+id/stng1_txtname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/code"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txt_clr" />
+                    
+                    <TextView
+                        android:id="@+id/stng1_onoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:text="@string/on"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/txt_clr" />
+
+                </RelativeLayout>
+        
+        </RelativeLayout>
+
+</RelativeLayout>

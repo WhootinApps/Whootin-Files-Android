@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="txt_clr">#37a8cc</color>
+    <color name="ln_clr">#ffb4ac</color>
+    <color name="hnt_clr">#a2e1f5</color>
+    <color name="txt_up">#013748</color>
+    <color name="txt_dwn">#217995</color>
+    <color name="qck_actn">#fb6b5b</color>
+    <color name="set_bcgrd">#edf1f4</color>
+    <color name="set_upcolor">#91cf5c</color>
+    <color name="set_redcolor">#f46060</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="light_gray">#E5E5E5</color>
+    <color name="black">#000000</color>
+    <color name="gray">#CCC</color>
+    <color name="pass">#efeff4</color>
+    <color name="list_row_selected">#78c8e6</color>
+</resources>

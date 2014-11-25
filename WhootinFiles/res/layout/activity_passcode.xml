@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AppUnlockLinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pass" >
+
+    <RelativeLayout
+        android:id="@+id/pscd_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_passcode" >
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/pscd_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pscd_navi"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/passcode_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/whootin_logo" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/top_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passcode_logo"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:text="@string/passcode_enter_passcode"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_clr" />
+
+            <LinearLayout
+                android:id="@+id/pin_code_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_message"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp" >
+
+                <EditText
+                    android:id="@+id/pincode_1"
+                    style="@style/PasscodeInputItemStyle"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rl_box"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/pincode_2"
+                    style="@style/PasscodeInputItemStyle"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rl_box"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/pincode_3"
+                    style="@style/PasscodeInputItemStyle"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rl_box"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/pincode_4"
+                    style="@style/PasscodeInputItemStyle"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rl_box"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/txt_clr" >
+                </EditText>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pin_code_row"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/line"
+                android:shrinkColumns="*"
+                android:stretchColumns="*" >
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button1"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/one" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/two" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/three" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button4"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/four" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/five" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/six" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button7"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/seven" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/eight" />
+
+                    <Button
+                        android:id="@+id/button9"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/nine" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/button_none"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/btn_star"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/button0"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/zero" />
+
+                    <Button
+                        android:id="@+id/button_erase"
+                        style="@style/PasscodeKeyboardButtonStyle"
+                        android:background="@drawable/btn_delete1" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

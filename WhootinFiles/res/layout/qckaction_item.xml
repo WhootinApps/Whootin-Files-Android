@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical|center_horizontal"
+	android:paddingTop="0dip"
+	android:paddingBottom="0dip"
+	android:paddingLeft="12dip"
+	android:paddingRight="12dip" 
+	android:clickable="true"
+	android:background="@color/qck_actn">
+
+	<ImageView
+		android:id="@+id/iv_icon" 
+		android:layout_width="wrap_content" 
+		android:layout_height="50dp"
+		android:layout_marginLeft="7dp"
+		android:layout_marginRight="7dp"/>
+		
+</LinearLayout>
